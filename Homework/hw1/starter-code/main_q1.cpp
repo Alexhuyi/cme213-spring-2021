@@ -46,7 +46,7 @@ int main()
     std::cout <<"l0 norm of B: "<<b.l0norm()<<std::endl;
 
     //change element
-    a(0,0)=10;
+    a(0,1)=10;
     std::cout<<"Symmetric matrix A after change: "<<std::endl;
     std::cout<<a<<std::endl;    
 

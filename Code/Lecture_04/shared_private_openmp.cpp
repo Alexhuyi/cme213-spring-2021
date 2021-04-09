@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 
     int is_private = -2;
 
-#pragma omp parallel private(is_private)
+#pragma omp parallel
     {
         int tid = omp_get_thread_num();
         int rand_tid = rand();

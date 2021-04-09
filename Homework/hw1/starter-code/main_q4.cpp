@@ -4,7 +4,7 @@
 #include <list>
 #include <numeric>
 #include <stdexcept>
-
+#include <cassert>
 
 /**********  Q4a: DAXPY **********/
 template <typename T>
@@ -170,9 +170,10 @@ int main()
     bool sign_q4d=true;
     for(auto iter = sparse.begin();std::next(iter,1) != sparse.end();iter++)
     {
-        if (!cmp_2(*iter,*(std::next(iter,1))))
+        if (!cmp_2(*iter,*(std::next(iter,1)))){
             sign_q4d=false;
             break;
+        }
     }
     assert(sign_q4d);
     std::cout <<"Q4d passes the test."<< std::endl;

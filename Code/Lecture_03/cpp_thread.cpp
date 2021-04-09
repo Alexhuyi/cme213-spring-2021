@@ -29,6 +29,9 @@ void f3(int &k)
 void f4(int m, int &k)
 {
     // todo
+  this_thread::sleep_for(chrono::milliseconds(20));
+  cout << "f4()called with m passed by value and k passed by reference; m= "<<m<<", k= "<<k<<endl;
+  k += m;
 }
 
 void accumulate(vector<int>::iterator first,
@@ -51,7 +54,7 @@ void get_max(vector<int>::iterator first,
     for (; it != last; ++it)
         sum = (*it > sum ? *it : sum);
     // todo
-    // max_promise
+    max_promise.set_value(sum);
 }
 
 int main(void)
@@ -83,9 +86,9 @@ int main(void)
     // After:
     // k = 15
     // todo: thread t4(...)
-    thread t4;
+    thread t4(f4,m,ref(k));
     // todo
-    // t4.join();
+    t4.join();
 
     cout << "k is now equal to " << k << endl;
     assert(k == 15);
@@ -107,15 +110,15 @@ int main(void)
 
     vector<int> vec_2 = {1, -2, 4, -10, 5, 4};
     // todo
-    // max_promise;
-    // max_future = ...
+    promise<int>  max_promise;
+    future<int> max_future = max_promise.get_future();
 
     // todo
-    thread t6;
+    thread t6(get_max,vec_2.begin(),vec_2.end(),move(max_promise));
     int max_result = 0;
 
     // todo
-    // max_result = ...
+    max_result = max_future.get();
     cout << "result of max_future [5 expected] = " << max_result << '\n';
     assert(max_result == 5);
 
