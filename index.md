@@ -19,6 +19,8 @@ Submissions after the deadline and late by at most two days (+48 hours after the
 
 See [Gradescope](https://www.gradescope.com/courses/258024) for all the current assignments and their due dates. Post on [Slack](https://cme213-spring-2021.slack.com/) if you cannot access the Gradescope class page. The 6-letter code to join the class is given on [Canvas](https://canvas.stanford.edu/courses/133903).
 
+[Datasheet on the Quadro RTX 6000](Code/quadro.txt)
+
 ## Class modules and learning material
 
 ### Introduction to the class
@@ -64,7 +66,21 @@ CME 213 First Live Lecture; [Video](https://stanford-pilot.hosted.panopto.com/Pa
 - 16 Sorting algorithms Quicksort Mergesort; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=368a4b90-eb0f-4e78-bf4e-ad05017f6de7)
 - 17 Sorting Algorithms Bitonic Sort; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=2c1c540a-d757-4dd1-b9ae-ad060004de65)
 - 18 Bitonic Sort Exercise; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=29690a03-da5e-468c-bdfb-ad060014f654)
+- [Reading assignment 3](Reading Assignments/OpenMP_advanced)
 - [Homework 2](Homework/hw2.pdf); [starter code](Homework/hw2.zip); [radix sort tutorial](Homework/RadixSortTutorial.pdf)
+
+### Module 4 Introduction to CUDA programming
+
+- Introduction to GPU computing; [Slides](Lecture Slides/Lecture_07.pdf)
+- Introduction to CUDA and `nvcc`; [Slides](Lecture Slides/Lecture_08.pdf); [Code](https://github.com/EricDarve/cme213-spring-2021/tree/main/Code/Lecture_08)
+- 19 GPU computing introduction; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d471ac2-3cf2-4adb-b8b9-ad0a016ce37d)
+- 20 Graphics Processing Units; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=241f3349-9454-4cca-833a-ad0a017729a1)
+- 21 Introduction to GPU programming; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e3277879-f1b8-4f14-8d87-ad0a01811c60)
+- 22 icme-gpu; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=0cddfda0-dd3e-4315-b669-ad0c016b3ce6)
+- 23 a First CUDA program; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1c2baeca-880d-49b2-a993-ad0c018b2ed9)
+- 23 b First CUDA program part 2; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=6d7e66bf-5b82-4200-bfd6-ad0d0006288a)
+- 24 nvcc CUDA compiler; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e6436528-7096-4b7e-804d-ad0d011ff2f9)
+- [Reading assignment 4](Reading Assignments/CUDA_intro)
 
 ## Reading and links
 
