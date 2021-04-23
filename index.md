@@ -82,6 +82,14 @@ CME 213 First Live Lecture; [Video](https://stanford-pilot.hosted.panopto.com/Pa
 - 24 nvcc CUDA compiler; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=e6436528-7096-4b7e-804d-ad0d011ff2f9)
 - [Reading assignment 4](Reading Assignments/CUDA_intro)
 
+### Module 5 Code performance on NVIDIA GPUs
+
+- GPU memory and matrix transpose; [Slides](Lecture Slides/Lecture_09.pdf); [Code](https://github.com/EricDarve/cme213-spring-2021/tree/main/Code/Lecture_09)
+- 25 GPU memory; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a337c354-634b-4036-a2bd-ad120000d2dc)
+- 26 Matrix transpose; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a2ae4f59-bdbb-4a67-a468-ad120023855e)
+- 27 Latency, concurrency, and occupancy; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=78a55dba-48a6-474b-bb69-ad13000fd03f)
+- 28 CUDA branching; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=bf1019a1-0440-4d70-951b-ad130028ef48)
+
 ## Reading and links
 
 **Lawrence Livermore National Lab Resources**
