@@ -21,6 +21,23 @@ See [Gradescope](https://www.gradescope.com/courses/258024) for all the current 
 
 [Datasheet on the Quadro RTX 6000](Code/quadro.txt)
 
+### Final Project
+
+Final project instructions and starter code:
+
+- [Final Project Part 1](Homework/Part1.pdf)
+- [Final Project Part 2](Homework/Part2.pdf)
+- [Starter code](Homework/fp.zip)
+
+Slides and videos explaining the final project:
+
+- Overview of the final project; [Slides](Lecture Slides/Lecture_14.pdf)
+- 33 Final Project 1, Overview; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=a4426523-7954-4526-a518-ad23017febd1)
+- 34 Final Project 2, Regularization; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c9a4709c-3fe8-434c-a837-ad24000112af)
+- 35 Final Project 3, CUDA GEMM and MPI; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f8578af5-61a1-4b52-89af-ad24001198d4)
+
+See also the [Module 8](https://ericdarve.github.io/cme213-spring-2021/#module-8-group-activity-and-introduction-to-mpi) videos on MPI.
+
 ## Class modules and learning material
 
 ### Introduction to the class
@@ -95,6 +112,45 @@ CME 213 First Live Lecture; [Video](https://stanford-pilot.hosted.panopto.com/Pa
 - [Reading assignment 5](Reading Assignments/GPU_performance)
 - [Homework 4](Homework/hw4.pdf); [starter code](Homework/hw4.zip)
 
+### Module 6 NVIDIA guest lectures, openACC, CUDA optimization
+
+- 30 NVIDIA guest lecture, openACC; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=3d931e4b-6a73-481f-b016-ad1d0181ed43); [Slides](Lecture Slides/CME213_2021_OpenACC.pdf)
+- 31 NVIDIA guest lecture, CUDA optimization; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=fa6c8558-b4fd-49cd-9e18-ad1f01843b34); [Slides](Lecture Slides/CME213_2021_Optimization.pdf)
+- [Reading assignment 6](Reading Assignments/NVIDIA_openACC_optimization)
+
+### Module 7 NVIDIA guest lectures, CUDA profiling
+
+- 32 NVIDIA guest lecture, CUDA profiling; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=ba6a97a2-7841-4c37-8ca1-ad240180023e); [Slides](Lecture Slides/CME213_2021_CUDA_Profiling.pdf)
+- [Reading assignment 7](Reading Assignments/NVIDIA_CUDA_profiling)
+
+### Module 8 Group activity and introduction to MPI
+
+The slides and videos below are needed for the final project.
+
+- Introduction to MPI; [Slides](Lecture Slides/Lecture_16.pdf); [Code](https://github.com/EricDarve/cme213-spring-2021/tree/main/Code/Lecture_16)
+- 37 MPI Introduction; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c7b9b334-fbac-4c51-9740-ad29017847d2)
+- 38 MPI Hello World; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=c8beedcb-bbc4-439b-b1d1-ad29017e0914)
+- 39 MPI Send Recv; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d36f28c6-9c62-4c80-8902-ad29018641d6)
+- 40 MPI Collective Communications; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=51c5cb27-157b-4fe4-a264-ad2a00028c67)
+
+Material for the May 17 group activity:
+
+- [generate_sequence.cpp](Code/generate_sequence.cpp)
+- 36 Instructions for Monday, May 17 group activity; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=04de4abf-6adb-4c3a-ade1-ad27002d0260); [Slides](Lecture Slides/Lecture_15.pdf)
+
+### Module 9 Advanced MPI
+
+- MPI Advanced Send and Recv; [Slides](Lecture Slides/Lecture_17.pdf); [Code](https://github.com/EricDarve/cme213-spring-2021/tree/main/Code/Lecture_17)
+- 41 MPI Process Mapping; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=53a88ac4-8574-4c83-8c2b-ad2d00031dff)
+- 42 MPI Buffering; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=36217368-59a9-416a-b854-ad2d0007de35)
+- 43 MPI Send Recv Deadlocks; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d662dbbc-18fb-4efb-bb02-ad2d000b10c1)
+- 44 MPI Non-blocking; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=1a68314e-15ab-4ac9-a8a0-ad2d000ebc31)
+- 45 MPI Send Modes; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=23b20f84-badf-4463-8a93-ad2d0029dd5f)
+- 46 MPI Matrix-vector product 1D schemes; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=40c04c7e-ee19-45d0-8bb0-ad2d01784ff6)
+- 47 MPI Matrix vector product 2D scheme; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=d4e398db-28eb-4747-a032-ad2d017dfc16)
+- 48 Parallel Speed-up; [Video](https://stanford-pilot.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=dd191579-3c13-4e79-9d2a-ad2d01824d85)
+
+<!-- - [Reading assignment 8](Reading Assignments/MPI) -->
 
 ## Reading and links
 
