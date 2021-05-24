@@ -81,8 +81,9 @@ int main()
     // You need to turn this code into a parallel code
     // using #pragma omp parallel for
     // TODO
-    for (int i = 2; i <= n; i <<= 1)
+    for (int i = 2; i <= chunk; i <<= 1)
     {
+#pragma omp parallel for
         for (int j = 0; j < n; j += i)
         {
             bool up = ((j / i) % 2 == 0);
@@ -91,6 +92,27 @@ int main()
 
         LogInfo("Sort of length %d", i);
         PrintSequence(n, seq, i);
+    }
+
+    for (int i = chunk<<1; i <= n; i <<= 1)
+    {
+        for (int j = 0; j < n; j += i)
+        {
+            bool up = ((j / i) % 2 == 0);
+            BitonicSortPar(j, i, seq, up,chunk);
+        }
+
+        LogInfo("Parallel Sort of length %d [%d]", i,j/i);
+        PrintSequence(n, seq, i);
+        
+#pragma omp parallel for
+        for (int j = 0; j < n; j += chunk)
+        {
+            bool up = ((j / i) % 2 == 0);
+            BitonicSortSeq(j, chunk, seq, up);
+        }
+            LogInfo("Sequential Sort of length %d", chunk);
+            PrintSequence(n, seq, chunk);
     }
 
     // end
@@ -166,6 +188,7 @@ void BitonicSortPar(int start, int length, vint &seq, bool up, int chunk)
 
     // bitonic split
     // TODO
+#pragma omp parallel for
     for (int i = start; i < start + split_length; i++)
     {
         if (up)
@@ -182,8 +205,11 @@ void BitonicSortPar(int start, int length, vint &seq, bool up, int chunk)
     }
 
     // TODO
-    BitonicSortPar(start, split_length, seq, up, chunk);
-    BitonicSortPar(start + split_length, split_length, seq, up, chunk);
+    if (split_length > chunk)
+    {
+        BitonicSortPar(start, split_length, seq, up, chunk);
+        BitonicSortPar(start + split_length, split_length, seq, up, chunk);
+    }
 }
 
 void PrintSequence(int n, vint &seq, int s)

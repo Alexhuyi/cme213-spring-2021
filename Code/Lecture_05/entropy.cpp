@@ -20,6 +20,7 @@ int main(void)
     vector<float> entropy0(size), entropy1(size);
 
     // todo: parallel for
+    #pragma omp parallel for
     for (unsigned i = 0; i < size; i++)
     {
         float d = i - float(size - 1) / 2.;
@@ -30,6 +31,7 @@ int main(void)
     float sum1 = 0, sum2 = 0;
     // todo: parallel for + reduction on sum1 & sum2
     // syntax: reduction(+: var1, var2, ...)
+    #pragma omp parallel for reduction (+:sum1,sum2)
     for (unsigned i = 0; i < size; i++)
     {
         sum1 += entropy0[i];
@@ -37,6 +39,7 @@ int main(void)
     }
 
     // todo: parallel for
+    #pragma omp parallel for
     for (unsigned i = 0; i < size; i++)
     {
         entropy0[i] /= sum1;
@@ -48,6 +51,7 @@ int main(void)
 
     float ent1 = 0, ent2 = 0;
     // todo: parallel for + reduction on ent1 & ent2
+    #pragma omp parallel for reduction (+:ent1,ent2)
     for (unsigned i = 0; i < size; i++)
     {
         if (entropy0[i] > 0)
