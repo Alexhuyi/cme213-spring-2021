@@ -1,0 +1,145 @@
+The master node of this job is icmet02
+This job runs on the following nodes:
+icmet02
+Starting at Thu May 27 22:07:30 UTC 2021
+Running on hosts: icmet02
+Running on 1 nodes.
+Running on 4 processors.
+Current working directory is /home/yeehu/cme213/fp
+
+Output from code
+----------------
+mpirun -np 4 ./main -g 1
+Number of MPI processes = 4
+Number of CUDA devices = 4
+num_neuron=100, reg=0.0001, learning_rate=0.0005, num_epochs=40, batch_size=800
+Loading training data...
+Training data stats...
+Size of x_train, N =  60000
+Size of label_train = 60000
+Start Sequential Training
+Time for Sequential Training: 180.145 seconds
+Precision on validation set for sequential training = 0.829167
+
+Start Parallel Training
+Time for Parallel Training: 6.30912 seconds
+Precision on validation set for parallel training = 0.829167
+
+Grading mode on. Now checking for correctness...
+
+Max norm of diff b/w seq and par: W[0]: 8.54229e-06, b[0]: 3.94265e-05
+l2  norm of diff b/w seq and par: W[0]: 1.03021e-05, b[0]: 2.46701e-05
+Max norm of diff b/w seq and par: W[1]: 6.33134e-06, b[1]: 1.42293e-05
+l2  norm of diff b/w seq and par: W[1]: 1.02525e-05, b[1]: 1.43129e-05
+mpirun -np 4 ./main -g 2
+Number of MPI processes = 4
+Number of CUDA devices = 4
+num_neuron=100, reg=0.0001, learning_rate=0.001, num_epochs=10, batch_size=800
+Loading training data...
+Training data stats...
+Size of x_train, N =  60000
+Size of label_train = 60000
+Start Sequential Training
+Time for Sequential Training: 44.7878 seconds
+Precision on validation set for sequential training = 0.756
+
+Start Parallel Training
+Time for Parallel Training: 1.94332 seconds
+Precision on validation set for parallel training = 0.756
+
+Grading mode on. Now checking for correctness...
+
+Max norm of diff b/w seq and par: W[0]: 4.08456e-06, b[0]: 3.92822e-05
+l2  norm of diff b/w seq and par: W[0]: 5.63051e-06, b[0]: 2.75627e-05
+Max norm of diff b/w seq and par: W[1]: 5.4667e-06, b[1]: 6.60546e-06
+l2  norm of diff b/w seq and par: W[1]: 7.41339e-06, b[1]: 8.21679e-06
+mpirun -np 4 ./main -g 3
+Number of MPI processes = 4
+Number of CUDA devices = 4
+num_neuron=100, reg=0.0001, learning_rate=0.002, num_epochs=1, batch_size=800
+Loading training data...
+Training data stats...
+Size of x_train, N =  60000
+Size of label_train = 60000
+Start Sequential Training
+Loss at iteration 0 of epoch 0/1 = 2.29525
+Loss at iteration 1 of epoch 0/1 = 2.29399
+Loss at iteration 2 of epoch 0/1 = 2.29243
+Loss at iteration 3 of epoch 0/1 = 2.29367
+Loss at iteration 4 of epoch 0/1 = 2.28915
+Loss at iteration 5 of epoch 0/1 = 2.28799
+Loss at iteration 6 of epoch 0/1 = 2.28458
+Loss at iteration 7 of epoch 0/1 = 2.28688
+Loss at iteration 8 of epoch 0/1 = 2.28817
+Loss at iteration 9 of epoch 0/1 = 2.28406
+Loss at iteration 10 of epoch 0/1 = 2.28119
+Loss at iteration 11 of epoch 0/1 = 2.28119
+Loss at iteration 12 of epoch 0/1 = 2.27676
+Loss at iteration 13 of epoch 0/1 = 2.2818
+Loss at iteration 14 of epoch 0/1 = 2.27728
+Loss at iteration 15 of epoch 0/1 = 2.27819
+Loss at iteration 16 of epoch 0/1 = 2.27824
+Loss at iteration 17 of epoch 0/1 = 2.27628
+Loss at iteration 18 of epoch 0/1 = 2.27497
+Loss at iteration 19 of epoch 0/1 = 2.27319
+Loss at iteration 20 of epoch 0/1 = 2.27311
+Loss at iteration 21 of epoch 0/1 = 2.27374
+Loss at iteration 22 of epoch 0/1 = 2.27005
+Loss at iteration 23 of epoch 0/1 = 2.27265
+Loss at iteration 24 of epoch 0/1 = 2.26582
+Loss at iteration 25 of epoch 0/1 = 2.2667
+Loss at iteration 26 of epoch 0/1 = 2.26705
+Loss at iteration 27 of epoch 0/1 = 2.26829
+Loss at iteration 28 of epoch 0/1 = 2.26544
+Loss at iteration 29 of epoch 0/1 = 2.26292
+Loss at iteration 30 of epoch 0/1 = 2.26098
+Loss at iteration 31 of epoch 0/1 = 2.25945
+Loss at iteration 32 of epoch 0/1 = 2.26117
+Loss at iteration 33 of epoch 0/1 = 2.26211
+Loss at iteration 34 of epoch 0/1 = 2.26084
+Loss at iteration 35 of epoch 0/1 = 2.25282
+Loss at iteration 36 of epoch 0/1 = 2.25584
+Loss at iteration 37 of epoch 0/1 = 2.25782
+Loss at iteration 38 of epoch 0/1 = 2.25447
+Loss at iteration 39 of epoch 0/1 = 2.25694
+Loss at iteration 40 of epoch 0/1 = 2.25928
+Loss at iteration 41 of epoch 0/1 = 2.24904
+Loss at iteration 42 of epoch 0/1 = 2.24844
+Loss at iteration 43 of epoch 0/1 = 2.25104
+Loss at iteration 44 of epoch 0/1 = 2.24615
+Loss at iteration 45 of epoch 0/1 = 2.24643
+Loss at iteration 46 of epoch 0/1 = 2.24927
+Loss at iteration 47 of epoch 0/1 = 2.24361
+Loss at iteration 48 of epoch 0/1 = 2.23799
+Loss at iteration 49 of epoch 0/1 = 2.24423
+Loss at iteration 50 of epoch 0/1 = 2.23961
+Loss at iteration 51 of epoch 0/1 = 2.2455
+Loss at iteration 52 of epoch 0/1 = 2.24232
+Loss at iteration 53 of epoch 0/1 = 2.23854
+Loss at iteration 54 of epoch 0/1 = 2.2361
+Loss at iteration 55 of epoch 0/1 = 2.23932
+Loss at iteration 56 of epoch 0/1 = 2.23609
+Loss at iteration 57 of epoch 0/1 = 2.23854
+Loss at iteration 58 of epoch 0/1 = 2.23203
+Loss at iteration 59 of epoch 0/1 = 2.2347
+Loss at iteration 60 of epoch 0/1 = 2.22742
+Loss at iteration 61 of epoch 0/1 = 2.23564
+Loss at iteration 62 of epoch 0/1 = 2.23363
+Loss at iteration 63 of epoch 0/1 = 2.22895
+Loss at iteration 64 of epoch 0/1 = 2.22821
+Loss at iteration 65 of epoch 0/1 = 2.22362
+Loss at iteration 66 of epoch 0/1 = 2.22401
+Loss at iteration 67 of epoch 0/1 = 2.22889
+Time for Sequential Training: 20.2989 seconds
+Precision on validation set for sequential training = 0.463667
+
+Start Parallel Training
+Time for Parallel Training: 5.66118 seconds
+Precision on validation set for parallel training = 0.463667
+
+Grading mode on. Now checking for correctness...
+
+Max norm of diff b/w seq and par: W[0]: 2.03816e-06, b[0]: 5.7499e-05
+l2  norm of diff b/w seq and par: W[0]: 4.63987e-06, b[0]: 5.19459e-05
+Max norm of diff b/w seq and par: W[1]: 1.8307e-06, b[1]: 1.21521e-05
+l2  norm of diff b/w seq and par: W[1]: 2.01094e-06, b[1]: 7.78908e-06

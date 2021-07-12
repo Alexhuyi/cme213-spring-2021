@@ -14,7 +14,8 @@ int main(int argc, char **argv)
   int rank, size;
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
   MPI_Comm_size(MPI_COMM_WORLD, &size);
-
+  int N = (rank==0) ? 5:0;
+  MPI_Bcast(&N, 1, MPI_INT, 0, MPI_COMM_WORLD);
   srand(2017 + (rank << 2));
 
   for (int i = 0; i < locn; i++)
@@ -32,7 +33,8 @@ int main(int argc, char **argv)
 
       for (int i = 0; i < locn; i++)
       {
-        printf(" %5d ", localarr[i]);
+        //printf(" %5d ", localarr[i]);
+        printf(" %5d ", N);
       }
 
       printf("\n");
